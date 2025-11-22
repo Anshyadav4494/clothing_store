@@ -2,10 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  root: ".",                      // project root
-  plugins: [react()],             // React plugin
-  base: '/clothing_store/',       // GitHub repo name (IMPORTANT)
+  plugins: [react()],
+  base: '/clothing_store/',     // MUST MATCH EXACT REPO NAME
   build: {
-    outDir: "dist",               // build folder
+    outDir: 'dist',
+    emptyOutDir: true,          // prevents old broken assets
   },
 });
